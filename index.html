@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML Meta Tags -->
+    <title>STAR WARS: Bed Wed & Behead</title>
+    <meta name="description" content="Play Star Wars: Bed Wed & Behead with 40,000+ characters">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="STAR WARS: Bed Wed & Behead">
+    <meta itemprop="description" content="Play Star Wars: Bed Wed & Behead with 40,000+ characters">
+    <meta itemprop="image"
+        content="">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://viggostrom.github.io/bedWedBehead">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STAR WARS: Bed Wed & Behead">
+    <meta property="og:description" content="Play Star Wars: Bed Wed & Behead with 40,000+ characters">
+    <meta property="og:image"
+        content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STAR WARS: Bed Wed & Behead">
+    <meta name="twitter:description" content="Play Star Wars: Bed Wed & Behead with 40,000+ characters">
+    <meta name="twitter:image"
+        content="">
+
+    <!-- Style -->
+    <link rel="stylesheet" media="only screen and (min-width: 1026px)" href="style/desktop.css">
+    <link rel="stylesheet" media="only screen and (max-width: 1026px)" href="style/mobile.css">
+    <link rel="shortcut icon" href="style/images/bedwedbehead_beshicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <img src="style/images/bedwedbeheadlogo.png" title="[Aurebesh] Bed Wed & Behead" alt="Bed Wed & Behead"
+        id="mainLogo">
+    <h1>STAR WARS:<br>Bed Wed & Behead</h1>
+
+    <section class="mainSection">
+        <a target="_blank" rel="noopener" href="" class="imageWrapper" tabindex="1">
+            <img class="image" src="style/images/placeholder-alien.png" alt="Alien">
+            <p class="name">Error</p>
+        </a>
+        <a target="_blank" rel="noopener" href="" class="imageWrapper" tabindex="5">
+            <img class="image" src="style/images/placeholder-alien.png" alt="Alien">
+            <p class="name">Error</p>
+        </a>
+        <a target="_blank" rel="noopener" href="" class="imageWrapper" tabindex="9">
+            <img class="image" src="style/images/placeholder-alien.png" alt="Alien">
+            <p class="name">Error</p>
+        </a>
+
+        <div class="iconWrapper">
+            <div id="bed1" onclick="select(this,'bed1')" tabindex="2">
+                <img src="style/images/icons/bed_FILL1_wght600_GRAD0_opsz48.png" alt="Bed" class="icon">
+                <p class="alternativeName">Bed</p>
+            </div>
+            <div id="bed2" onclick="select(this,'bed2')" tabindex="6">
+                <img src="style/images/icons/bed_FILL1_wght600_GRAD0_opsz48.png" alt="Bed" class="icon">
+                <p class="alternativeName">Bed</p>
+            </div>
+            <div id="bed3" onclick="select(this,'bed3')" tabindex="10">
+                <img src="style/images/icons/bed_FILL1_wght600_GRAD0_opsz48.png" alt="Bed" class="icon">
+                <p class="alternativeName">Bed</p>
+            </div>
+
+
+            <div id="wed1" onclick="select(this,'wed1')" tabindex="3">
+                <img src="style/images/icons/favorite_FILL1_wght600_GRAD0_opsz48.png" alt="Wed" class="icon">
+                <p class="alternativeName">Wed</p>
+            </div>
+            <div id="wed2" onclick="select(this,'wed2')" tabindex="7">
+                <img src="style/images/icons/favorite_FILL1_wght600_GRAD0_opsz48.png" alt="Wed" class="icon">
+                <p class="alternativeName">Wed</p>
+            </div>
+            <div id="wed3" onclick="select(this,'wed3')" tabindex="11">
+                <img src="style/images/icons/favorite_FILL1_wght600_GRAD0_opsz48.png" alt="Wed" class="icon">
+                <p class="alternativeName">Wed</p>
+            </div>
+
+
+            <div id="behead1" onclick="select(this,'behead1')" tabindex="4">
+                <img src="style/images/icons/skull_FILL1_wght600_GRAD0_opsz48.png" alt="Behead" class="icon">
+                <p class="alternativeName">Behead</p>
+            </div>
+            <div id="behead2" onclick="select(this,'behead2')" tabindex="8">
+                <img src="style/images/icons/skull_FILL1_wght600_GRAD0_opsz48.png" alt="Behead" class="icon">
+                <p class="alternativeName">Behead</p>
+            </div>
+            <div id="behead3" onclick="select(this,'behead3')" tabindex="12">
+                <img src="style/images/icons/skull_FILL1_wght600_GRAD0_opsz48.png" alt="Behead" class="icon">
+                <p class="alternativeName">Behead</p>
+            </div>
+        </div>
+
+        <div class="playButtonWrapper">
+            <p onclick="play()" class="playButton" tabindex="13">Play</p>
+            <p>Character count: <span id="totalCharacterCount">00000</span></p>
+        </div>
+    </section>
+
+    <div id="filterTip">
+        <h3>Never heard of <a target="_blank"
+                href="https://starwars.fandom.com/wiki/Unidentified_Hebekrr_Minor_magistrate%27s_granddaughter%27s_wife">Unidentified
+                Hebekrr Minor magistrate's granddaughter's wife</a>? Try these filters!</h3>
+        <p>→</p>
+        <div id="confirmTipButton" onclick="document.getElementById('filterTip').style.display = 'none'">Got it!</div>
+    </div>
+
+    <img onclick="toggleConfigMenu(); document.getElementById('filterTip').style.display = 'none'"
+        src="style/images/icons/icon_settings.png" id="gearIcon" class="icon direction" title="Filters" tabindex="14">
+
+    <aside id="configMenu" style="display: none;">
+        <h2>Filter</h2>
+
+        <form id="configForm" onchange="updateConfig()">
+            <div id="miscellaneous" class="filterHeadingWrapper">
+                <p>Include ONLY</p>
+                <p class="filterHeading">Miscellaneous</p>
+            </div>
+            <div id="status" class="filterHeadingWrapper">
+                <p>Include ONLY</p>
+                <p class="filterHeading">Canonicity</p>
+            </div>
+            <div id="appearance" class="filterHeadingWrapper">
+                <p>Include ONLY</p>
+                <p class="filterHeading">Appearances</p>
+            </div>
+            <div id="gender" class="filterHeadingWrapper">
+                <p>Include ONLY</p>
+                <p class="filterHeading">Gender</p>
+            </div>
+        </form>
+    </aside>
+
+
+    <footer>
+        <p>Data sourced from <a href="https://starwars.fandom.com/" target="_blank">Wookieepedia</a></p>
+        <p>Licensed under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a></p>
+    </footer>
+
+    <script src="script/configHandler.js"></script>
+    <script src="script/filters.js"></script>
+    <script src="script/select.js"></script>
+    <script src="script/readCharacter.js"></script>
+</body>
+
+</html>

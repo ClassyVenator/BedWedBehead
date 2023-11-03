@@ -1,0 +1,380 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url(images/quick-ps-6CsREDPUK3Y-unsplash.jpg);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: white;
+}
+
+#mainLogo {
+    max-height: 16vh;
+    max-width: 50vw;
+    margin-top: 3vh;
+}
+
+h1 {
+    max-width: 50vw;
+    text-align: center;
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.mainSection {
+    margin-top: 3vh;
+    display: grid;
+    column-gap: 5vw;
+    row-gap: 3vh;
+    grid-template-columns: min-content min-content min-content;
+    grid-template-rows: auto auto;
+}
+
+.imageWrapper {
+    width: 15vw;
+}
+
+.image {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 100%;
+}
+
+.image:hover {
+    scale: 1.05;
+}
+
+.name {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0;
+}
+
+.name:hover {
+    filter: brightness(.6);
+}
+
+.iconWrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-column: 1/4;
+    column-gap: 5vw;
+    row-gap: 1vh;
+}
+
+.iconWrapper div {
+    display: flex;
+    cursor: pointer;
+    padding-left: 1vw;
+    gap: 1vw;
+    align-items: center;
+    justify-content: left;
+    user-select: none;
+}
+
+.iconWrapper div:hover {
+    scale: 1.05;
+}
+
+.icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%);
+    border-radius: 1vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.alternativeName {
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.selected {
+    box-shadow: 0 0 0 4px #ffe81f;
+    border-radius: 1vw;
+}
+
+.playButtonWrapper {
+    width: 15vw;
+    grid-column-start: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.playButtonWrapper p:last-of-type {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.playButton {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+
+    color: black;
+    background-color: #ffe81f;
+    cursor: pointer;
+    user-select: none;
+
+    border-radius: 1vw;
+    width: 9vw;
+    padding-bottom: 0.8vh;
+    margin: 0;
+    margin-top: 0vh;
+
+    scale: .95;
+}
+
+.playButton:hover {
+    scale: 1.05;
+}
+footer {
+    margin-top: 5vh;
+}
+footer p {
+    font-size: small;
+    text-align: center;
+}
+
+#gearIcon {
+    position: fixed;
+    top: 1vh;
+    right: 0.5vw;
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+#gearIcon:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(34deg) brightness(60%) contrast(102%);
+}
+
+#configMenu h2 {
+    margin: 0;
+    grid-column: 1 / 4;
+    text-align: center;
+    cursor: default;
+    margin-bottom: 0.2rem;
+}
+
+#configMenu {
+    position: fixed;
+    top: 4.5rem;
+    right: 0.5vw;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    padding: 1vw;
+    padding-right: 1vw;
+    z-index: 1;
+    min-width: 20rem;
+    height: 75vh;
+
+    overflow-y: scroll;
+}
+
+#configForm {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 2rem max-content;
+    grid-template-rows: repeat(30, 2rem);
+}
+
+#configForm label {
+    grid-column: 2 / 4;
+    font-size: large;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+    align-self: center;
+}
+
+.labelForTextInput {
+    grid-column: 2/3;
+}
+
+#configForm input[type=text] {
+    width: 80%;
+    justify-self: center;
+
+    background-color: transparent;
+    border: none;
+}
+
+#configForm input[type=checkbox] {
+    cursor: pointer;
+    /* grid-column: 3 / 4; */
+}
+
+.textInputWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: white;
+    border-radius: .3vh;
+    height: 1.7rem;
+    margin-left: 1vw;
+}
+
+.textInputWrapper img {
+    cursor: pointer;
+    height: 1.7rem;
+    width: 1.7rem;
+    margin-right: .3vw;
+    align-self: center;
+    justify-self: center;
+    filter: invert(51%) sepia(0%) saturate(898%) hue-rotate(264deg) brightness(88%) contrast(85%);
+}
+
+.textInputWrapper img:hover {
+    scale: 1.05;
+}
+
+.textInputWrapper img:active {
+    scale: 1.1;
+}
+
+.biggerTextInputWrapper {
+    align-items: center;
+}
+
+.filterHeading {
+    font-weight: 500;
+    grid-column: 1/4;
+    margin: 0;
+}
+
+.filterHeadingWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1vh;
+    grid-column: 1/4;
+}
+
+.filterHeadingWrapper p:first-of-type {
+    border-bottom: 1px solid white;
+}
+
+
+.spinLeft {
+    animation: spinLeft 500ms ease-in-out;
+}
+
+.spinRight {
+    animation: spinRight 500ms ease-in-out;
+}
+
+@keyframes spinLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes spinRight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
+
+/* Incognito Mode */
+/* body {
+    background-image: none;
+    background-color: #343434;
+    opacity: 0.05;
+} */
+
+#filterTip {
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: auto 20%;
+    grid-template-rows: 5rem auto;
+
+    top: 2vh;
+    right: 4.5rem;
+
+    width: 30vw;
+    padding: 0;
+    margin: 0;
+
+    background-color: #ffe81f;
+    color: black;
+
+    border-radius: 2vw;
+
+    opacity: .95;
+
+    display: none;
+}
+
+#filterTip a {
+    color: black;
+}
+
+#filterTip a:hover {
+    filter: opacity(.7);
+}
+
+#filterTip h3 {
+    font-size: 1rem;
+    padding: 0;
+    margin-top: .8rem;
+    margin-left: 1.1rem;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+#filterTip p {
+    margin: 0;
+    transform: translateY(-2rem);
+    font-size: 5rem;
+    text-align: center;
+}
+
+#confirmTipButton {
+    grid-column: span 2;
+    text-align: center;
+
+    background-color: black;
+    color: white;
+    padding: .4rem;
+    padding-bottom: .6rem;
+    margin: .8rem;
+    border-radius: 1vw;
+    user-select: none;
+    cursor: pointer;
+    width: 85%;
+    justify-self: center;
+}
+
+#confirmTipButton:hover {
+    scale: 1.05;
+}

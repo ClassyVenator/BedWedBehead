@@ -1,0 +1,363 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url(images/quick-ps-6CsREDPUK3Y-unsplash.jpg);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: white;
+}
+
+#mainLogo {
+    max-height: 10vh;
+    max-width: 80vw;
+    margin-top: 4vh;
+}
+
+h1 {
+    max-width: 80vw;
+    text-align: center;
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.mainSection {
+    margin-top: 4vh;
+    display: grid;
+    row-gap: 1vh;
+    width: 100%;
+    grid-template-rows: auto auto;
+}
+
+.imageWrapper {
+    justify-self: center;
+    width: 29vw;
+}
+
+.image {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 100%;
+}
+
+.name {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.3vh;
+    margin-bottom: 0;
+}
+
+.name:hover {
+    filter: brightness(.6);
+}
+
+.iconWrapper {
+    margin-top: 2vh;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-column: 1/4;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.iconWrapper div {
+    display: flex;
+    cursor: pointer;
+    gap: 1vw;
+    align-items: center;
+    user-select: none;
+    height: 3rem;
+}
+
+.icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%);
+    border-radius: 1vw;
+    width: 8vw;
+    height: 8vw;
+}
+
+.alternativeName {
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.selected {
+    box-shadow: 0 0 0 4px #ffe81f;
+    border-radius: 1vw;
+}
+
+.playButtonWrapper {
+    justify-self: center;
+    width: 30vw;
+    grid-column-start: 2;
+    margin-top: 2vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.playButton {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+
+    color: black;
+    background-color: #ffe81f;
+    cursor: pointer;
+    user-select: none;
+
+    border-radius: 1vw;
+    width: 100%;
+    padding-bottom: 0.8vh;
+    margin-top: 0vh;
+
+    scale: .95;
+}
+
+footer p {
+    font-size: small;
+    text-align: center;
+}
+
+#gearIcon {
+    position: fixed;
+    top: 0.2vh;
+    right: 0.5vw;
+    cursor: pointer;
+    user-select: none;
+    height:3rem;
+    width: 3rem;
+}
+
+#configMenu h2 {
+    margin: 0;
+    grid-column: 1 / 4;
+    text-align: center;
+    cursor: default;
+    margin-bottom: 0.2rem;
+    margin-top: .5rem;
+}
+
+#configMenu {
+    position: fixed;
+    top: 3.5rem;
+    right: 0.5vw;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    padding: 0;
+    z-index: 1;
+    width: 90vw;
+    height: 70vh;
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#configForm {
+    margin-right: 3vw;
+    margin-left: 2vw;
+    display: grid;
+    grid-template-columns: 2rem max-content;
+    grid-template-rows: repeat(30, 2rem);
+}
+
+#configForm label {
+    grid-column: 2 / 4;
+    font-size: large;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+    align-self: center;
+}
+
+.labelForTextInput {
+    grid-column: 2/3;
+}
+
+#configForm input[type=text] {
+    width: 80%;
+    justify-self: center;
+
+    background-color: transparent;
+    border: none;
+}
+
+#configForm input[type=checkbox] {
+    cursor: pointer;
+}
+
+.textInputWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: white;
+    border-radius: .3vh;
+    height: 1.7rem;
+    margin-left: 1vw;
+}
+
+.textInputWrapper img {
+    cursor: pointer;
+    height: 1.7rem;
+    width: 1.7rem;
+    margin-right: .3vw;
+    align-self: center;
+    justify-self: center;
+    filter: invert(51%) sepia(0%) saturate(898%) hue-rotate(264deg) brightness(88%) contrast(85%);
+}
+
+.textInputWrapper img:active {
+    scale: 1.1;
+}
+
+.biggerTextInputWrapper {
+    align-items: center;
+}
+
+.filterHeading {
+    /* font-size: 1.2rem; */
+    font-weight: 500;
+    grid-column: 1/4;
+    margin: 0;
+    /* margin-left: 10vw; */
+}
+
+.filterHeadingWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1vh;
+    grid-column: 1/4;
+}
+
+.filterHeadingWrapper p:first-of-type {
+    border-bottom: 1px solid white;
+}
+.filterHeadingWrapper u {
+    display: none;
+}
+
+.spinLeft {
+    animation: spinLeft 500ms ease-in-out;
+}
+
+.spinRight {
+    animation: spinRight 500ms ease-in-out;
+}
+
+@keyframes spinLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes spinRight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
+
+/* Incognito Mode */
+/* body {
+    background-image: none;
+    background-color: #343434;
+    opacity: 0.05;
+} */
+
+
+#filterTip {
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    top: 1vh;
+    right: 3.5rem;
+
+    width: 70vw;
+    padding: 0;
+    margin: 0;
+
+    background-color: #ffe81f;
+    color: black;
+
+    border-radius: 2vw;
+
+    opacity: .95;
+
+    display: none;
+}
+
+#filterTip a {
+    color: black;
+}
+
+#filterTip a:hover {
+    filter: opacity(.7);
+}
+
+#filterTip h3 {
+    font-size: 1rem;
+    padding: 0;
+    margin-top: .8rem;
+    margin-left: 1.1rem;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+#filterTip p {
+    margin: 0;
+    transform: translateY(-10vw);
+    width: 20vw;
+    font-size: 20vw;
+    text-align: center;
+}
+
+#confirmTipButton {
+    grid-column: span 2;
+    text-align: center;
+
+    background-color: black;
+    color: white;
+    padding: .4rem;
+    padding-bottom: .6rem;
+    margin: .8rem;
+    border-radius: 1vw;
+    user-select: none;
+    cursor: pointer;
+    width: 85%;
+    justify-self: center;
+}
+
+#confirmTipButton:hover {
+    scale: 1.05;
+}
